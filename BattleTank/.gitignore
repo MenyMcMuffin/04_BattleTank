@@ -2,7 +2,7 @@
 .vs/
 
 #Visual Studio database file
-*.vc
+*.vc.db
 
 # Compiled Object files
 *.slo
@@ -65,4 +65,4 @@ Intermediate/*
 DerivedDataCache/*
 
 # Starter Content
-StarterContent/*
+Content/StarterContent/*

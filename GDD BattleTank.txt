@@ -1,0 +1,64 @@
+Battle Tank Game
+GDD V1.0 (@09 Oct 16)
+
+Game Flow
+1) Main Menu
+2) Play Game ->Win or Lose
+3) Performance Screen
+4) Main Menu
+
+Game Rules
+The objective of the game is to eliminate all the other enemy tanks by firing at them, while navigating through the terrain. Each tank *can have a different* set of characteristics such as HP, Speed, Damage per Bullet and Size, which will provide a richer experience for the player.
+
+Game Status
+1) GameIsPlaying - There is at least one enemy tank and a player tank still in the battlefield.
+2) GameIsWon - Only the player tank remains on the battlefield.
+3) GameIsLost - The player tank has been eliminated.
+4) UnknownStatus - Default status for debugging issues.
+5) GameIsPaused - Game is paused while on the In-Game Menu.
+
+Actor Status
+1) Eliminated - When a tank's HP is reduced to 0 or less. The following effects apply:
+     a) Tank Mesh remains on the battlefield.
+     b) Tank loses all game controls (movement, fire, aim, etc)
+2) Active - Tank has more than 0HP. Has all game controls.
+
+Mechanics
+1) HP - Represents the durability of a tank. When a tank's HP is reduced to 0 or less, it is eliminated.
+2) Speed - Represents how mobile a tank is. Higher speed increases the rate of movement. Speed can be reduced by terrain type or after a certain treshold of damage taken.
+3) Damage per Bullet - This is the HP loss inflicted on enemy tanks when a bullet from this tank hits them.
+4) Size - The bigger the tank, the easier it is to aim at it.
+5) Ammo - It is Finite. Player will lose the "Fire" game control when it is 0.
+
+Game Interface
+1) Player HUD
+     a) Aim Scope [Mouse] - Free movement along the screen. [Green] when not focusing an enemy and [Red] when focusing an enemy unit.
+     b) HP - Shows the current and total HP of your tank.
+     c) Speed - Rate = 1.0 when on normal terrain and full hp. Less than 1.0 if affected by terrain or damage.
+     d) Ammo - Remaining ammo is shown.
+2) Player Camera - Third Person View ->Allows for better navigation of the level.
+3) In-Game Menu
+     a) Continue - Returns to game
+     b) Quit - Returns to main menu
+
+Game Controls
+1) Aim Scope [Mouse] - Free movement along the screen.
+2) Tank Movement [WASD]
+3) Fire Bullet [RMB] - Fires a hitscan bullet.
+4) In-Game Menu [Esc] - Opens an In-Game Menu.
+     a) Mouse Over Select [Mouse]
+     b) Confirm Selection [LMB]
+
+Requirements
+1) Sound FX
+     a) Engine Running
+     b) Tank Explosion
+     c) Bullet Fire
+     d) Bullet Hit
+2) Music
+     a) War Music
+3) 3d Models
+     a) Tank Model
+     b) Bullet Model
+4) Particle Effects
+     a) Explosion
